@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA Tenerife - Relajación y Bienestar</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Enlace al archivo CSS -->
+  </head>
+
+  <body>
+    <!-- Cabecera de la página -->
+    <header>
+      <div class="container">
+        <h1>SPA Tenerife</h1>
+        <!-- Título principal -->
+        <p>Relajación y Bienestar en el paraíso</p>
+        <!-- Subtítulo descriptivo -->
+
+        <!-- Botones de redes sociales -->
+        <div class="social-buttons">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="img/facebook.svg" class="f" alt="Facebook" />
+            <!-- Icono de Facebook -->
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <img src="img/twitter.svg" class="t" alt="Twitter" />
+            <!-- Icono de Twitter -->
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="img/instagram.svg" class="i" alt="Instagram" />
+            <!-- Icono de Instagram -->
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <img src="img/linkedin.svg" class="l" alt="LinkedIn" />
+            <!-- Icono de LinkedIn -->
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sección Hero con carrusel de imágenes -->
+    <section class="hero">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="img/spa1.jpg" alt="Relajación en el SPA" class="active" />
+          <!-- Imagen activa del carrusel -->
+          <img src="img/spa2.jpg" alt="Masaje Relajante" />
+          <!-- Segunda imagen del carrusel -->
+          <img src="img/spa3.jpg" alt="Baños Termales" />
+          <!-- Tercera imagen del carrusel -->
+        </div>
+        <!-- Botones para navegar entre las imágenes -->
+        <button class="carousel-button prev" onclick="moveSlide(-1)">
+          &#10094;
+        </button>
+        <!-- Botón anterior -->
+        <button class="carousel-button next" onclick="moveSlide(1)">
+          &#10095;
+        </button>
+        <!-- Botón siguiente -->
+      </div>
+    </section>
+
+    <!-- Sección principal de la página -->
+    <main>
+      <!-- Sección de promoción de categorías de servicios -->
+      <section class="promotions-section">
+        <h2>Nuestras Categorías de Servicios</h2>
+        <!-- Título de la sección -->
+        <div class="categories">
+          <!-- Primera categoría -->
+          <div class="category">
+            <img src="img/massage.jpg" alt="Masajes Relajantes" />
+            <!-- Imagen de masajes -->
+            <h3>Masajes Relajantes</h3>
+            <!-- Título de la categoría -->
+            <p>
+              Disfruta de un masaje relajante y olvídate del estrés. Tenemos
+              técnicas de masaje de todo el mundo.
+            </p>
+            <!-- Descripción -->
+          </div>
+          <!-- Segunda categoría -->
+          <div class="category">
+            <img src="img/thermal-baths.jpg" alt="Baños Termales" />
+            <!-- Imagen de baños termales -->
+            <h3>Baños Termales</h3>
+            <!-- Título de la categoría -->
+            <p>
+              Sumérgete en nuestras piscinas termales y rejuvenece tu cuerpo en
+              un ambiente de lujo.
+            </p>
+            <!-- Descripción -->
+          </div>
+          <!-- Tercera categoría -->
+          <div class="category">
+            <img src="img/facial-treatment.jpg" alt="Tratamientos Faciales" />
+            <!-- Imagen de tratamientos faciales -->
+            <h3>Tratamientos Faciales</h3>
+            <!-- Título de la categoría -->
+            <p>
+              Revitaliza tu piel con nuestros tratamientos faciales exclusivos,
+              diseñados para darte una piel radiante.
+            </p>
+            <!-- Descripción -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de formulario de reserva -->
+      <section class="reservation-section">
+        <h2>Reserva Tu Servicio</h2>
+        <!-- Título de la sección -->
+        <form id="reservation-form">
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <!-- Etiqueta para el campo de nombre -->
+            <input type="text" id="name" name="name" required />
+            <!-- Campo de texto para nombre -->
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <!-- Etiqueta para el campo de email -->
+            <input type="email" id="email" name="email" required />
+            <!-- Campo de texto para email -->
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono:</label>
+            <!-- Etiqueta para el campo de teléfono -->
+            <input type="tel" id="phone" name="phone" required />
+            <!-- Campo de texto para teléfono -->
+          </div>
+          <div class="form-group">
+            <label for="service">Servicio:</label>
+            <!-- Etiqueta para el campo de servicio -->
+            <select id="service" name="service" required>
+              <!-- Menú desplegable para seleccionar servicio -->
+              <option value="">Selecciona un servicio</option>
+              <option value="masaje">Masaje Relajante</option>
+              <option value="baño">Baño Termal</option>
+              <option value="facial">Tratamiento Facial</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Fecha de Reserva:</label>
+            <!-- Etiqueta para el campo de fecha -->
+            <input type="date" id="date" name="date" required />
+            <!-- Campo de selección de fecha -->
+          </div>
+          <button type="submit">Reservar</button>
+          <!-- Botón para enviar el formulario -->
+          <div id="confirmation-message" class="hidden">
+            ¡Tu reserva ha sido enviada con éxito!
+          </div>
+          <!-- Mensaje de confirmación -->
+        </form>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>&copy; 2024 SPA Tenerife. Todos los derechos reservados.</p>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Enlace a archivo de JavaScript para la validación del formulario y carrusel -->
+    <script src="./app.js"></script>
+    <!-- Enlace al script -->
+  </body>
+</html>

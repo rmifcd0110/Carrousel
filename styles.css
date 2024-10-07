@@ -1,0 +1,197 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Tipo de fuente general */
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar padding por defecto */
+    line-height: 1.6; /* Espaciado de líneas */
+}
+
+/* Estilos de la cabecera */
+header {
+    background-color: #f8f8f8; /* Color de fondo de la cabecera */
+    padding: 20px; /* Espaciado interior */
+    position: relative; /* Posición relativa para los elementos dentro */
+}
+
+/* Contenedor para el título y subtítulo */
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centrar el texto */
+}
+
+/* Botones de redes sociales */
+.social-buttons {
+    position: absolute; /* Posición absoluta para colocarlos en la esquina */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde la derecha */
+    display: flex; /* Flexbox para alinear horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+.social-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-buttons a img {
+    width: 3rem;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del Hero */
+.hero {
+    position: relative; /* Posición relativa para los elementos dentro */
+    width: 100%; /* Ancho completo */
+    height: 100vh; /* Altura completa de la ventana */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.carousel {
+    position: absolute; /* Posición absoluta para que cubra todo el hero */
+    top: 0; /* Ajustar en la parte superior */
+    left: 0; /* Ajustar a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.carousel-images {
+    display: flex; /* Flexbox para alinear las imágenes */
+    height: 100%; /* Mantiene la altura de las imágenes del carrusel */
+    transition: transform 0.5s ease; /* Transición suave al cambiar de imagen */
+}
+
+.carousel-images img {
+    min-width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+    height: 100%; /* Mantiene la altura del hero */
+    object-fit: cover; /* Mantiene la relación de aspecto de las imágenes */
+    border-radius: 0; /* Sin esquinas redondeadas */
+}
+
+/* Estilos de los botones del carrusel */
+.carousel-button {
+    position: absolute; /* Posición absoluta para colocar los botones */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar el desplazamiento */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interior */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    font-size: 20px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fondo blanco sólido al pasar el ratón */
+}
+
+.carousel-button.prev {
+    left: 20px; /* Posicionar a la izquierda */
+}
+
+.carousel-button.next {
+    right: 20px; /* Posicionar a la derecha */
+}
+
+/* Estilos de la sección principal */
+main {
+    padding: 20px; /* Espaciado interior */
+}
+
+/* Sección de promociones */
+.promotions-section {
+    margin-top: 40px; /* Margen superior */
+}
+
+.categories {
+    display: flex; /* Flexbox para alinear las categorías */
+    justify-content: space-around; /* Espacio entre categorías */
+    flex-wrap: wrap; /* Permitir que las categorías se envuelvan en varias líneas */
+}
+
+.category {
+    flex-basis: 30%; /* Cada categoría ocupa el 30% del ancho */
+    margin-bottom: 20px; /* Margen inferior entre categorías */
+    text-align: center; /* Centrar texto */
+}
+
+.category img {
+    width: 100%; /* Imagen ocupa el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Estilos del formulario */
+.reservation-section {
+    margin-top: 40px; /* Margen superior */
+}
+
+form {
+    display: flex; /* Flexbox para organizar campos */
+    flex-direction: column; /* Apilar campos verticalmente */
+    width: 400px; /* Ancho fijo del formulario */
+    margin: 0 auto; /* Centrar formulario horizontalmente */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Margen inferior entre grupos de campos */
+}
+
+input,
+select,
+button {
+    padding: 10px; /* Espaciado interior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Botón de envío */
+button {
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+}
+
+button:hover {
+    background-color: #218838; /* Fondo verde oscuro al pasar el ratón */
+}
+
+/* Mensaje de confirmación oculto por defecto */
+.hidden {
+    display: none; /* Ocultar el elemento */
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center; /* Centrar texto */
+    padding: 20px; /* Espaciado interior */
+    background-color: #f8f8f8; /* Color de fondo del pie de página */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column; /* Apilar categorías verticalmente */
+        align-items: center; /* Centrar categorías */
+    }
+
+    .category {
+        flex-basis: 80%; /* Cada categoría ocupa el 80% del ancho en móviles */
+        margin-bottom: 30px; /* Espacio inferior */
+    }
+
+    form {
+        width: 90%; /* Ancho del formulario en móviles */
+    }
+
+    .carousel-button {
+        padding: 5px; /* Espaciado interior reducido en móviles */
+    }
+}
