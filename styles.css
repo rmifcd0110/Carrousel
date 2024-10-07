@@ -14,30 +14,43 @@ header {
 }
 
 /* Contenedor para el título y subtítulo */
+/* Estilo para el contenedor principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center; /* Centrar el texto */
+    display: flex; /* Activar Flexbox */
+    flex-direction: row; /* Organizar los elementos en una fila */
+    align-items: center; /* Centrar los elementos verticalmente */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    max-height: 100px; /* Altura máxima del contenedor */
+    padding: 0 20px; /* Espaciado horizontal dentro del contenedor */
+    box-sizing: border-box; /* Incluir padding y border en el cálculo de ancho y alto */
+    background-color: #f8f9fa; /* Fondo claro */
 }
 
-/* Botones de redes sociales */
+/* Estilo para el título y el subtítulo */
+.container h1,
+.container p {
+    margin: 0; /* Eliminar margen */
+}
+
+/* Estilo para los botones de redes sociales */
 .social-buttons {
-    position: absolute; /* Posición absoluta para colocarlos en la esquina */
-    top: 10px; /* Distancia desde la parte superior */
-    right: 10px; /* Distancia desde la derecha */
-    display: flex; /* Flexbox para alinear horizontalmente */
-    gap: 10px; /* Espacio entre los botones */
-}
-.social-buttons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Activar Flexbox para los botones de redes sociales */
+    gap: 15px; /* Espacio entre los iconos de las redes sociales */
+    justify-content: flex-end;
 }
 
-.social-buttons a img {
-    width: 3rem;
-    padding: 0;
-    box-sizing: border-box;
+/* Estilo para las imágenes de los iconos */
+.social-buttons img {
+    width: 40px; /* Tamaño de los iconos */
+    height: 40px; /* Tamaño de los iconos */
+    object-fit: cover;
+    filter: grayscale(100%); /* Efecto de blanco y negro */
+    transition: filter 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+/* Al pasar el ratón, restaurar el color original */
+.social-buttons img:hover {
+    filter: grayscale(0%); /* Restaurar el color al pasar el ratón */
 }
 
 /* Estilos del Hero */
