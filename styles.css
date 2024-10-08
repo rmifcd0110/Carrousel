@@ -37,20 +37,39 @@ header {
     display: flex; /* Activar Flexbox para los botones de redes sociales */
     gap: 15px; /* Espacio entre los iconos de las redes sociales */
     justify-content: flex-end;
+    max-height: 3rem;
+    min-width: 20rem;
+}
+
+.social-buttons a {
+    display: flex;
+}
+
+/* Color social-icons*/
+.imgColor {
+    filter: invert(31%) sepia(53%) saturate(2337%) hue-rotate(198deg) brightness(106%) contrast(96%);
+}
+.imgColor:hover {
+    filter: invert(10%) sepia(49%) saturate(5160%) hue-rotate(248deg) brightness(83%) contrast(115%);
 }
 
 /* Estilo para las imágenes de los iconos */
-.social-buttons img {
-    width: 40px; /* Tamaño de los iconos */
-    height: 40px; /* Tamaño de los iconos */
+.social-buttons a img {
+    width: 20px; /* Tamaño de los iconos */
+    height: 20px; /* Tamaño de los iconos */
     object-fit: cover;
-    filter: grayscale(100%); /* Efecto de blanco y negro */
-    transition: filter 0.3s ease; /* Transición suave al pasar el ratón */
+
+    /*filter: grayscale(100%); /* Efecto de blanco y negro */
+    /*transition: filter 0.3s ease; /* Transición suave al pasar el ratón */
+    transition: color 0.3s ease;
 }
 
 /* Al pasar el ratón, restaurar el color original */
 .social-buttons img:hover {
-    filter: grayscale(0%); /* Restaurar el color al pasar el ratón */
+    /* background-color: #043575; */
+    color: #f4f5f7;
+    fill: #1877f2;
+    /*filter: grayscale(0%); /* Restaurar el color al pasar el ratón */
 }
 
 /* Estilos del Hero */
@@ -206,5 +225,12 @@ footer {
 
     .carousel-button {
         padding: 5px; /* Espaciado interior reducido en móviles */
+    }
+
+    .container {
+        display: flex; /* Activar Flexbox */
+        flex-direction: column; /* Organizar los elementos en una fila */
+        padding: 0;
+        align-items: start;
     }
 }

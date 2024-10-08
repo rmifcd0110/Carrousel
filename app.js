@@ -2,6 +2,7 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-images img');
 const totalSlides = slides.length;
+const name = document.getElementById('name');
 
 // Función para mover el carrusel
 function moveSlide(direction) {
@@ -19,6 +20,12 @@ function moveSlide(direction) {
     carouselImages.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
+// Función validar nombre
+function validarNombre(nombre) {
+    const regex = /^[A-Za-zÁÉÍÓÚáéíóúñÑ]+(?:\s[A-Za-zÁÉÍÓÚáéíóúñÑ]+)*$/;
+    return regex.test(nombre);
+}
+
 // Event listener para el formulario
 document.getElementById('reservation-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevenir el envío del formulario
@@ -30,8 +37,9 @@ document.getElementById('reservation-form').addEventListener('submit', function 
     const service = document.getElementById('service').value;
     const date = document.getElementById('date').value;
 
+    validarNombre(name) ? console.log('nombre correcto') : console.log('nombre no válido');
     // Validar que todos los campos estén completos
-    if (name && email && phone && service && date) {
+    if (validarNombre(name) && email && phone && service && date) {
         // Mostrar el mensaje de confirmación
         document.getElementById('confirmation-message').classList.remove('hidden');
 
