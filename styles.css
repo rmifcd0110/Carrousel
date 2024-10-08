@@ -107,6 +107,7 @@ header {
 /* Estilos de los botones del carrusel */
 .carousel-button {
     position: absolute; /* Posición absoluta para colocar los botones */
+    width: 10px;
     top: 50%; /* Centrar verticalmente */
     transform: translateY(-50%); /* Ajustar el desplazamiento */
     background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
@@ -160,7 +161,11 @@ main {
 
 /* Estilos del formulario */
 .reservation-section {
+    margin: 0 auto;
     margin-top: 40px; /* Margen superior */
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 form {
@@ -177,10 +182,11 @@ form {
 input,
 select,
 button {
-    padding: 10px; /* Espaciado interior */
+    padding: 10px 0; /* Espaciado interior */
     border: 1px solid #ccc; /* Borde gris claro */
     border-radius: 5px; /* Esquinas redondeadas */
     font-size: 16px; /* Tamaño de fuente */
+    width: 95%;
 }
 
 /* Botón de envío */
@@ -220,7 +226,7 @@ footer {
     }
 
     form {
-        width: 90%; /* Ancho del formulario en móviles */
+        width: 100%; /* Ancho del formulario en móviles */
     }
 
     .carousel-button {
